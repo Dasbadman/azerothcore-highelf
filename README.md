@@ -38,7 +38,7 @@ Make sure you understand what each file and command does, and adjust the steps a
 Installation consists of applying a patch and replacing DBC files on the server, and applying some mpq patches on the client.
 
 1. Fully install and configure Azeroth Core with or without playerbots. Installing and setting up the basic Azeroth Core is out of scope of this doc. Installation instructions can be found in https://www.azerothcore.org/ .
-2. Follow the instructions in [Installation step by step.txt](/Installation step by step.txt).
+2. Follow the instructions in `Installation step by step.txt`.
 
 ## How this was built
 
