@@ -1,0 +1,146 @@
+====================================================================================================
+====================================================================================================
+====================================================================================================
+This file, and "DBC Creation Step by Step SQL.sql" document how the edited DBCs were created.
+This is for informational purposes only. There is no need to run these steps again unless you are
+making enhancements to the project.
+@ author abracadaniel222
+====================================================================================================
+====================================================================================================
+====================================================================================================
+
+Overall
+=======================
+This version is compatible with the HD WOD model patches out there
+No idea how the HD patches are done so I just overwrote some files from the regular version with some files from Worgoblin repo (after modifying them) https://github.com/araxiaonline/mod-worgoblin/tree/araxia-main/data/patch-hd/DBFilesClient
+See worgoblin in this file to see which 4 files were modified
+
+
+Step by step to create the DBC files manually
+=======================
+Open file in WDBX Editor
+Export to SQL. That's the original DBC table. Keep in handy in case you need to reset the table. 
+run sudo mysql dbc < File.sql to (re)create the table in the "dbc" DB or any dev db you want
+Make your edits in mysql (with the specific instructions below, and the companion SQL file with commands)
+Export the table to CSV file
+Import it in WDBX Editor, replacing all data
+Save the file
+
+
+After editing all DBFilesClient files:
+=======================
+Put them in the server (build/data/dbc folder)
+Use MPQ Editor, create a new MPQ file with the contents of the DBFilesClient folder. 
+Place it in the data dir of WoW client
+Run the server SQL commands (some server tables aren't in DBC files)
+Restart the server
+
+
+
+After editing all client only files
+=======================
+Put them in an mpq in the client. The exact order depends on what other shit you have installed so it's case by case.
+
+Patch-5.dbc: client only file:
+This file contains all helmets copied and renamed from _Be to _He . Without it, helmets do not display.
+This file also contains the new character Interface modifications. Alternatively, those could just be pasted into Interface folder, but better pack it to keep each release intact.
+Known issue: for High elf, female hair go over some helmets (DK starting helmet for example).
+Patch-a.dbc: contains all DBC files also in the server
+Patch-t.dbc: goes after the HD models patch to rewrite some textures the HD models overwrite. It contains some of the DBC files from patch-a. Added this because the HD patch screws up some textures, likely rewriting things in Patch-a. So patch-t rewrites them again, but not all DBCs were needed.
+Steps done to create helmets in Patch-5:
+Extracted all helmets with MPQ extractor, starting from the highest expansion mpq file to the lowest, not overriding.
+	Alternative: start from the lowest mpq file to the highest, overriding as they are extracted. This is so only the latest helmet models remain
+Run a shell script to mass rename from _Be to _He
+Throw into a new mpq at the correct folder: Item\ObjectComponents\Head
+
+
+DBC summary (also see the SQL file)
+=======================
+
+ChrRace
+Duplicate belf in new race
+ChrBaseInfo
+Duplicate belf in new 12 racewith all classes
+CHarStartOutfit
+Duplicate belf in new 12 racewith all classes
+
+SkillLineAbility:
+
+Update every 1101 skill to 3149 (all alliance)
+
+Update every 1029 (seems to be alliance paladin skills) to 3077
+
+Update every 512 skill to 2560 (belf only, now belf+high elf)
+	EXCEPT FOR spells 31898, 53733, 53736, 53742, 34767, 34769, 34767, 34769
+	
+
+SkillRaceClassInfo  (1535 is all classes)
+update racemask to 2215 where skill id 44 and racemask 167  (warr axes)
+
+update racemask to 2560 where racemask 512  (weapons and racial belf skills)
+
+UPDATE racemask to 2568 where racemask=520 and skill 173  (probably bows)
+UPDATE racemask to 2568 where racemask=650 and skill 45 (probably bows)
+
+update racemask to 3071 where skillid = 759 and racemask = 1023 (no draenei)
+
+update racemask to 3077 where racemask=1029 and skill 43 (swords paladin again)
+
+update racemask to 3111 where racemask=1063 and skill=173 (daggers for warr)
+
+udpate to 3149 where mask is 1101 (why not)
+
+update to 3160 where mask is 1112 and skill 44
+update to 3163 where mask is 1115 and skill 43
+update to 3238 where mask is 1190 and skill 173
+update to 3577 where mask is 1529 and skill 172
+update to 3592 where mask is 1544 and skill is 44
+update to 3722 where mask is 1674 and skill is 46
+update to 4095 where mask is 2047
+
+
+CreatureDisplayInfo, CreatureDisplayInfoExtra
+See sql file but it's basically:
+	update creaturedisplayinfoextra where race is 12 to race 2 (orc)
+	duplicate belf entries in creaturedisplayinfoextra to new race
+	duplicate belf entries in CreatureDisplayInfo and link to new entries created in creaturedisplayinfoextra
+	
+CharSections
+USE WORGOBLIN DBC AS STARTING POINT
+DELETE where raceid is 12
+duplicate 10 into 12
+
+CharacterFacilHairStyles
+USE WORGOBLIN DBC AS STARTING POINT
+DELETE where raceid is 12
+duplicate 10 into 12
+
+CharHairGeoSets
+USE WORGOBLIN DBC AS STARTING POINT
+DELETE where raceid is 12
+duplicate 10 into 12
+
+Factions
+duplicate where name_lang_enus is PLAYER, Human
+update individual race masks (used python script to generate)
+
+TalentTab
+set racemask to 4095 where racemask=2047
+
+
+Barbershopstyle
+Duplicate where race is 10 into race 12
+
+CharHairTexture
+copy straight from worgoblin
+
+EmotesTextSound
+duplicate 10 into 12
+
+VocalUISounds
+duplicate 10 into 12
+
+NameGen
+VocalUISounds
+duplicate 10 into 12
+after the server loads, run scripts in world db in other file
