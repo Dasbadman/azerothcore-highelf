@@ -57,9 +57,9 @@ cd $AC_CODE_DIR/modules
 # for every module:
 git pull
 
-If any conflicts getting the code, might want to stash the patch, get code, pop stash, fix conflicts, hopefully doing it in the staging server. (TODO update the steps to copy built from staging to prod, so that a new git pull won't get new changes)
+If any conflicts getting the code, might want to stash the patch, get code, pop stash, fix conflicts
 
-cd build... cmake ... make... make install
+recompile
 
 Restart server
 
