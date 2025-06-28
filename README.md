@@ -45,3 +45,11 @@ Installation consists of applying a patch and replacing DBC files on the server,
 With the help of the WoW Modding Community channel on Discord and https://github.com/araxiaonline/mod-worgoblin.
 
 See DBC `Creation Step by Step.txt` and `DBC Creation Step by Step SQL.sql`.
+
+## Screenshots
+
+![ss01](https://github.com/user-attachments/assets/55101550-e397-4f3e-91d1-ae6e60bd1f49)
+
+![ss02](https://github.com/user-attachments/assets/d7f019c9-1169-4de4-bc34-2155a7582a83)
+
+![ss03](https://github.com/user-attachments/assets/cf9944b4-17e0-4557-8d1b-086bfc18041f)
