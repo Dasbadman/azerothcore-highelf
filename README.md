@@ -32,6 +32,10 @@ The goals for this project are very simple and limited, allowing for quick feedb
 
 - AzerothCore supports modules but the race list is hardcoded and can't be extended, so this "module" consists of a patch to be applied to AzerothCore core code after cloning it. Another option would be forking and keeping it up-to-date with the source but maintaining that would go against the simplicity constraints of this project.
 
+## Requirements
+
+- This requires a patched version of WoW.exe that allows interface edits (SIG & MD5 Protection removed). The version downloaded from Warmane or ChromieCraft should work. You can also download a patcher tool and do it yourself from the WoW Modding Community discord or from ownedcore.com. Without a patched version, the client will not accept the interface changes and will not allow you to play the game with errors such as "Your login interface files are corrupt".
+
 ## Installation
 
 Make sure you understand what each file and command does, and adjust the steps accordingly based on your setup. It is likely that some things don't apply to you if you don't have a Ubuntu + Playerbots setup.
