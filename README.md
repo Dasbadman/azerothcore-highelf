@@ -34,7 +34,7 @@ The goals for this project are very simple and limited, allowing for quick feedb
 
 ## Requirements
 
-- This requires a patched version of WoW.exe that allows interface edits (SIG & MD5 Protection removed). The version downloaded from Warmane or ChromieCraft should work. You can also download a patcher tool from the WoW Modding Community discord or from ownedcore.com and do it yourself. Without a patched version, the client will not accept the interface changes and will not allow you to play the game with errors such as "Your login interface files are corrupt".
+- This requires a patched version of WoW.exe that allows interface edits (SIG & MD5 Protection removed). The version downloaded from Warmane or ChromieCraft should work. You can also download a patcher tool from the WoW Modding Community discord or from ownedcore.com and do it yourself. Without a patched version, the client will not accept the interface changes and will not allow you to play the game, throwing out errors such as "Your login interface files are corrupt".
 
 ## Installation
 
