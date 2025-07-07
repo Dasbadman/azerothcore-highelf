@@ -2,11 +2,9 @@
 
 Mod to add High Elves as playable characters on Azeroth Core with support for mod-playerbots.
 
-By abracadaniel222.
-
 ## Goals
 
-I am not familiar with modding so the goals for this project were very simple and limited, allowing for quick feedback and a quick POC:
+The goals for this project are very simple and limited, allowing for quick feedback and a quick POC:
 
 1. Duplicate blood elf models into a new high elf race
 2. Copy everything else from humans (starting zone, mounts, reputation, quests, etc)
@@ -24,8 +22,11 @@ I am not familiar with modding so the goals for this project were very simple an
 - Eyes don't glow blue
 - Warriors don't have Arcane Torrent
 - No audio in emotes (such as /hi, /joke, etc)
-- Hair clipping for some helmets for female High Elf
-- Race change is untested (once I do, I might update this project)
+- If High Elves start with no weapons skills, ensure that you don't have any modules modifying skills as it may conflict. Compatibility enhancements to this mod are welcomed!
+
+## Open issues
+
+- See [the issues page](https://github.com/abracadaniel22/azerothcore-highelf/issues) for known issues. Feel free to report anything there, or to fix issues if you are willing to contribute.
 
 ## Other considerations
 
