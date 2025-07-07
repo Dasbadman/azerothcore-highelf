@@ -4,7 +4,7 @@
 This file, and "DBC Creation Step by Step SQL.sql" document how the edited DBCs were created.
 This is for informational purposes only. There is no need to run these steps again unless you are
 making enhancements to the project.
-@ author abracadaniel222
+@ author abracadaniel22
 ====================================================================================================
 ====================================================================================================
 ====================================================================================================
@@ -41,13 +41,13 @@ After editing all client only files
 =======================
 Put them in an mpq in the client. The exact order depends on what other shit you have installed so it's case by case.
 
-Patch-5.dbc: client only file:
+Patch-7.dbc: client only file:
 This file contains all helmets copied and renamed from _Be to _He . Without it, helmets do not display.
 This file also contains the new character Interface modifications. Alternatively, those could just be pasted into Interface folder, but better pack it to keep each release intact.
 Known issue: for High elf, female hair go over some helmets (DK starting helmet for example).
 Patch-a.dbc: contains all DBC files also in the server
 Patch-t.dbc: goes after the HD models patch to rewrite some textures the HD models overwrite. It contains some of the DBC files from patch-a. Added this because the HD patch screws up some textures, likely rewriting things in Patch-a. So patch-t rewrites them again, but not all DBCs were needed.
-Steps done to create helmets in Patch-5:
+Steps done to create helmets in Patch-7:
 Extracted all helmets with MPQ extractor, starting from the highest expansion mpq file to the lowest, not overriding.
 	Alternative: start from the lowest mpq file to the highest, overriding as they are extracted. This is so only the latest helmet models remain
 Run a shell script to mass rename from _Be to _He
