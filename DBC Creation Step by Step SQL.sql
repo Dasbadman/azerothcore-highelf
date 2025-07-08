@@ -1,6 +1,6 @@
 -- This file contains queries used to update data in DBC files exported to mysql
 -- There is no need to run this if your goal is to just use the mod.
--- @ author abracadaniel222
+-- @ author abracadaniel22
 -- See DBC Creation Step By Step.txt
 
 
@@ -84,9 +84,10 @@ WHERE RaceID = 10;
 -- In order to be compatible with HD patch
 -- Non-hd version can use standard charsection dbc
 
-DELETE FROM db_CharSections_12340_worg_no_12 WHERE raceid=12;
-SET @new_id := (SELECT MAX(ID) FROM db_CharSections_12340_worg_no_12);
-INSERT INTO db_CharSections_12340_worg_no_12 (
+-- Create high elf model entries by copying blood elf model entries
+DELETE FROM db_CharSections_12340 WHERE raceid=12;
+SET @new_id := (SELECT MAX(ID) FROM db_CharSections_12340);
+INSERT INTO db_CharSections_12340 (
 ID, 
 RaceID, 
 SexID, 
@@ -111,6 +112,21 @@ VariationIndex,
 ColorIndex
 FROM db_CharSections_12340_worg_no_12
 WHERE RaceID = 10;
+
+-- Modify entries 0 to 9 to use the blue eye faceupper models (currently stored in variation 10 to 19)
+UPDATE db_CharSections_12340 AS target
+JOIN db_CharSections_12340 AS source
+  ON target.colorindex = source.colorindex
+  AND target.variationindex = source.variationindex - 10
+  AND target.raceid = source.raceid
+  AND target.sexid = source.sexid
+SET
+  target.texturename_1 = source.texturename_1,
+  target.texturename_2 = source.texturename_2
+WHERE target.variationindex < 10
+AND target.raceid = 12
+AND target.texturename_2 like "%FaceUpper%";
+
 
 -- --------------------------------
 -- CharStartOutfit

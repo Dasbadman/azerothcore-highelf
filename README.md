@@ -19,7 +19,6 @@ The goals for this project are very simple and limited, allowing for quick feedb
 
 ## Known limitations
 
-- Eyes don't glow blue
 - Warriors don't have Arcane Torrent
 - No audio in emotes (such as /hi, /joke, etc)
 - If High Elves start with no weapons skills, ensure that you don't have any modules modifying skills as it may conflict. Compatibility enhancements to this mod are welcomed!

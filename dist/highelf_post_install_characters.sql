@@ -3,7 +3,7 @@
 -- World DB - after server initialized for the first time
 -- This can be run with sudo mysql acore_characters < highelf_post_install.sql
 -- DONT FORGET TO RESTART SERVER sudo service ac-worldserver restart
--- @ author abracadaniel222
+-- @ author abracadaniel22
 -- ===================================--
 -- ===================================--
 

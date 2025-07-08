@@ -4,7 +4,7 @@
 -- This can be run with sudo mysql acore_world < highelf_post_install.sql
 -- DONT FORGET TO RESTART SERVER sudo service ac-worldserver restart
 -- KEEP THIS FILE IDEMPOTENT
--- @ author abracadaniel222
+-- @ author abracadaniel22
 -- ===================================--
 -- ===================================--
 
