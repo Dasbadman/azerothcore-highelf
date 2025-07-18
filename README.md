@@ -57,3 +57,7 @@ See DBC `Creation Step by Step.txt` and `DBC Creation Step by Step SQL.sql`.
 ![abracadaniel22_highelf_azerothcore_01](https://github.com/user-attachments/assets/77effdb0-1735-4cc3-b7be-5693145ba2be)
 
 ![abracadaniel22_highelf_azerothcore_02](https://github.com/user-attachments/assets/c7c4ed6e-94cc-40ec-83f8-9a43e293b80d)
+
+## Reporting bugs and contributing
+
+Bug reports and contributions are welcome. Please go to the Issues tab to submit a bug or enhancement request, or submit your contribution via Pull Request.
