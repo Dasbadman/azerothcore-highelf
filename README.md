@@ -52,8 +52,8 @@ See DBC `Creation Step by Step.txt` and `DBC Creation Step by Step SQL.sql`.
 
 ## Screenshots
 
-![ss01](https://github.com/user-attachments/assets/55101550-e397-4f3e-91d1-ae6e60bd1f49)
+![abracadaniel22_highelf_azerothcore_00](https://github.com/user-attachments/assets/1dcc02a7-b7cb-445c-b559-6614f68c913e)
 
-![ss02](https://github.com/user-attachments/assets/d7f019c9-1169-4de4-bc34-2155a7582a83)
+![abracadaniel22_highelf_azerothcore_01](https://github.com/user-attachments/assets/77effdb0-1735-4cc3-b7be-5693145ba2be)
 
-![ss03](https://github.com/user-attachments/assets/cf9944b4-17e0-4557-8d1b-086bfc18041f)
+![abracadaniel22_highelf_azerothcore_02](https://github.com/user-attachments/assets/c7c4ed6e-94cc-40ec-83f8-9a43e293b80d)
