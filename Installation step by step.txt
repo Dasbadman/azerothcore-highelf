@@ -4,6 +4,7 @@
 ################################################
 
 Server:
+-------------------------------------
 
 Run full backups using your standard backup scripts
 
@@ -39,6 +40,13 @@ Start server:
 sudo service ac-authserver start
 sudo service ac-worldserver start
 
+Client:
+-------------------------------------
+Copy the files from the https://github.com/abracadaniel22/azerothcore-highelf/tree/main/dist/Data  folder into the client's Data folder
+
+Delete the Cache folder of the client
+
+Start the client
 
 ################################################
                   UPDATE ACORE
