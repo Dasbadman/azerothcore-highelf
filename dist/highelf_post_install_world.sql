@@ -2596,6 +2596,7 @@ UPDATE item_template SET allowablerace = 3149 WHERE entry = 18787;/*name: Swift 
 UPDATE item_template SET allowablerace = 3149 WHERE entry = 18902;/*name: Reins of the Swift Stormsaber, old mask: 1101*/
 UPDATE item_template SET allowablerace = 3149 WHERE entry = 25471;/*name: Ebon Gryphon, old mask: 1101*/
 UPDATE item_template SET allowablerace = 3149 WHERE entry = 25472;/*name: Snowy Gryphon, old mask: 1101*/
+UPDATE item_template SET allowablerace = 3149 WHERE entry = 25470;/*name: Golden Gryphon, old mask: 1101*/
 UPDATE item_template SET allowablerace = 3149 WHERE entry = 25473;/*name: Swift Blue Gryphon, old mask: 1101*/
 UPDATE item_template SET allowablerace = 3149 WHERE entry = 25527;/*name: Swift Red Gryphon, old mask: 1101*/
 UPDATE item_template SET allowablerace = 3149 WHERE entry = 25528;/*name: Swift Green Gryphon, old mask: 1101*/
